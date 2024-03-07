@@ -1,4 +1,4 @@
-FROM kasmweb/core-ubuntu-jammy:1.15.0-rolling
+FROM kasmweb/core-ubuntu-focal:1.15.0-rolling
 USER root
 
 ENV HOME /home/kasm-default-profile
@@ -16,10 +16,10 @@ RUN bash $INST_SCRIPTS/chromium/install_chromium.sh && rm -rf $INST_SCRIPTS/chro
 RUN apt-get update && apt-get install -y vlc
 
 # Install Picard
-RUN add-apt-repository ppa:musicbrainz-developers/stable && apt update && apt-get install -y picard
+RUN add-apt-repository ppa:musicbrainz-developers/stable && apt-get update && apt-get install -y picard
 
 # Install EasyTAG
-RUN add-apt-repository ppa:amigadave/ppa && apt update && apt-get install -y easytag
+RUN add-apt-repository ppa:amigadave/ppa && apt-get update && apt-get install -y easytag
 
 ######### End Customizations ###########
 
