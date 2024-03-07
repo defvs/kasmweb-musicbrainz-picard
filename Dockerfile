@@ -18,9 +18,6 @@ RUN apt-get update && apt-get install -y vlc
 # Install Picard
 RUN add-apt-repository ppa:musicbrainz-developers/stable && apt-get update && apt-get install -y picard
 
-# Install EasyTAG
-RUN add-apt-repository ppa:amigadave/ppa && apt-get update && apt-get install -y easytag
-
 ######### End Customizations ###########
 
 RUN chown 1000:0 $HOME
